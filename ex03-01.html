@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+
+<body>
+    <div id="counter">0</div>
+    <button id="increase">+</button>
+    <button id="decrease">-</button>
+    <script>
+        // 에러를 발생시키는 코드: 선택지는 'couter-x'가 아니라 'counter'를 지정해야 한다.
+        const counter = document.getElementById('counter-x');
+        const increase = document.getElementById('increase');
+        const decrease = document.getElementById('decrease');
+
+        let num = 0;
+        const render = function () {
+            counter.innerHTML = num;
+        }
+
+        increase.onclick = function () {
+            num++;
+            console.log('increase 버튼 클릭', num);
+            render();
+        };
+
+        decrease.onclick = function () {
+            num--;
+            console.log('decrease 버튼 클릭', num);
+            render();
+        };
+    </script>
+</body>
+
+</html>
+
+<!-- 디버깅방법 -->
+<!-- 1. 콘솔창을 열어 에러의 링크를 클릭한다. -->
+<!-- 2. 자동으로 넘어간 소스패널에 해당 에러가 표시된 줄(왼쪽 번호)을 클릭한다.(브레이크 포인트) -->
+<!-- 3. 에러를 재현하기 위해 웹페이지의 버튼(에러발생 지점)을 다시 클릭한다. -->
+<!-- 4. 디버깅모드 활성화(디버깅 모드가 활성화되지 않으면 웹페이지를 새로고침한다.) -->
+<!-- 5. 소스패널의 브레이크 포인트를 찍어 놓은 줄에 마우스를 가져다 대면 에러 발생원인을 알 수 있다. -->
