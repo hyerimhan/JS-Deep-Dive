@@ -229,8 +229,7 @@ function repeat(n, f) {
 }
 
 var logAll = function(i) {
-    console.log(i);
-};
+    console.log(i);};
 
 // 반복 호출할 함수를 인수로 전달한다.
 repeat(5, logAll); // 0 1 2 3 4
